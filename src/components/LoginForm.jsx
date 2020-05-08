@@ -96,6 +96,10 @@ const LoginForm = props => {
         if (user.firstNameError || user.lastNameError || user.emailError || user.passwordError || user.confirmPasswordError){
             alert("Invalid input, cannot complete registration")
         }
+        else if (user.firstName === "" || user.lastName === "" || user.email === "" || user.password === "" || user.confirmPassword === ""){
+            alert("Invalid input, cannot complete registration")
+        }
+
         else {
             let newUser = {
                 firstName: user.firstName,
